@@ -22,59 +22,62 @@ class PredictPipeline:
         
 class CustomData:
     def __init__(self, 
-                 Gender : str,
-                 Age: float,
-                 Height :float,
-                 Weight: float,
-                 family_history_with_overweight: str,
-                 FAVC: str,
-                 FCVC: float,
-                 NCP: float,
-                 CAEC: str,
-                 SMOKE: str,
-                 CH2O: float,
-                 SCC: str,
-                 FAF: float,
-                 TUE: float,
-                 CALC: str,
-                 MTRANS: str):
+                 Administrative : int,
+                 Administrative_Duration: float,
+                 Informational :int,
+                 Informational_Duration: float,
+                 ProductRelated: int,
+                 ProductRelated_Duration: float,
+                 BounceRates: float,
+                 ExitRates: float,
+                 PageValues: float,
+                 SpecialDay: float,
+                 Month: str,
+                 OperatingSystems: int,
+                 Browser: int,
+                 Region: int,
+                 TrafficType: int,
+                 VisitorType: str,
+                 Weekend:bool):
         
-        self.Gender = Gender
-        self.Age = Age
-        self.Height = Height
-        self.Weight = Weight
-        self.family_history_with_overweight=family_history_with_overweight
-        self.FAVC=FAVC
-        self.FCVC=FCVC
-        self.NCP = NCP
-        self.CAEC= CAEC
-        self.SMOKE= SMOKE
-        self.CH2O=CH2O
-        self.SCC=SCC
-        self.FAF=FAF
-        self.TUE=TUE
-        self.CALC=CALC
-        self.MTRANS=MTRANS
+        self.Administrative = Administrative
+        self.Administrative_Duration = Administrative_Duration
+        self.Informational = Informational
+        self.Informational_Duration = Informational_Duration
+        self.ProductRelated=ProductRelated
+        self.ProductRelated_Duration=ProductRelated_Duration
+        self.BounceRates=BounceRates
+        self.ExitRates = ExitRates
+        self.PageValues= PageValues
+        self.SpecialDay= SpecialDay
+        self.Month=Month
+        self.OperatingSystems=OperatingSystems
+        self.Browser=Browser
+        self.Region=Region
+        self.TrafficType=TrafficType
+        self.VisitorType=VisitorType
+        self.Weekend=Weekend
                 
     def get_data_as_dataframe(self):
           try:
                 custom_data_input_dict={
-                      "Gender":[self.Gender],
-                      "Age":[self.Age],
-                      "Height":[self.Height],
-                      "Weight":[self.Weight],
-                      "family_history_with_overweight":[ self.family_history_with_overweight],
-                      "FAVC":[self.FAVC],
-                      "FCVC":[self.FCVC],
-                      "NCP":[self.NCP],
-                      "CAEC":[self.CAEC],
-                      "SMOKE":[self.SMOKE],
-                      "CH2O":[self.CH2O],
-                      "SCC":[self.SCC],
-                      "FAF":[self.FAF],
-                      "TUE":[self.TUE],
-                      "CALC":[self.CALC],
-                      "MTRANS":[self.MTRANS]        
+                      "Administrative":[self.Administrative],
+                      "Administrative_Duration":[self.Administrative_Duration],
+                      "Informational":[self.Informational],
+                      "Informational_Duration":[self.Informational_Duration],
+                      "ProductRelated":[self.ProductRelated],
+                      "ProductRelated_Duration":[self.ProductRelated_Duration],
+                      "BounceRates":[self.BounceRates],
+                      "ExitRates":[self.ExitRates],
+                      "PageValues":[self.PageValues],
+                      "SpecialDay":[self.SpecialDay],
+                      "Month":[self.Month],
+                      "OperatingSystems":[self.OperatingSystems],
+                      "Browser":[self.Browser],
+                      "Region":[self.Region],
+                      "TrafficType":[self.TrafficType],
+                      "VisitorType":[self.VisitorType],
+                      "Weekend":[self.Weekend]        
                 }
                 
                 return pd.DataFrame(custom_data_input_dict)

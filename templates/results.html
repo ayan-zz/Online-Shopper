@@ -1,195 +1,160 @@
 <html>
 <head>
-<title>Prediction for Obesity in Peoples</title>
+<title>Prediction for Revenue at Weekends for Online Shoppers</title>
 </head>
 
-<h2 ALIGN="CENTER">OBESITY PREDICTION IN PEOPLES </h2>
+<h2 ALIGN="CENTER">REVENUE AT WEEKEND FOR ONLINE SHOPPERS </h2>
 
 <form action="{{url_for('predict_datapoint')}}" method="post">
     <table border="0" align="center">
 <tbody>
 
 <tr>
-    <td><label for="Gender">Gender:</label></td>
-    <td><select class="form-control" name="Gender" placeholder="Enter Gender" required>
-        <option class="placeholder" selected disabled value="">Select Gender</option>
-        <option value="Male">
-            Male
+    <td><label for="Month">Month:</label></td>
+    <td><select class="form-control" name="Month" placeholder="Enter Month" required>
+        <option class="placeholder" selected disabled value="">Select Month</option>
+        <option value="Feb">
+            Feb
         </option>
-        <option value="Female">
-            Female
+        <option value="Mar">
+            Mar
         </option>
-    </select>
-    </td>
-</tr>
-
-
-<tr>
-    <td><label for="Age">Age:</label></td>
-    <td><input class="form-control" type="number" name="Age" placeholder="Enter the Age" min='0' max='1000' /></td>
-</tr>
-
-<tr>
-    <td><label for="Height">Height:</label></td>
-    <td><input id="Height" maxlength="50" name="Height" type="number" type="number" min="1" max="100" step="0.1" placeholder="Enter float value" /></td>
-</tr>
-
-<tr>
-    <td><label for="Weight">Weight:</label></td>
-    <td><input id="Weight" maxlength="50" name="Weight" type="number" type="number" min="1" max="500" placeholder="Enter float value" /></td>
-</tr>
-
-<tr>
-    <td><label for="family_history_with_overweight">family_history_with_overweight:</label></td>
-    <td><select class="form-control" name="family_history_with_overweight" placeholder="Enter Family History" required>
-        <option class="placeholder" selected disabled value="">Select history_with_overweight</option>
-        <option value="yes">
-            yes
+        <option value="May">
+            May
         </option>
-        <option value="no">
-            no
+        <option value="June">
+            June
+        </option>
+        <option value="Jul">
+            Jul
+        </option>
+        <option value="Aug">
+            Aug
+        </option>
+        <option value="Sep">
+            Sep
+        </option>
+        <option value="Oct">
+            Oct
+        </option>
+        <option value="Nov">
+            Nov
+        </option>
+        <option value="Dec">
+            Dec
         </option>
     </select>
     </td>
 </tr>
 
 <tr>
-    <td><label for="FAVC">FAVC:</label></td>
-    <td><select class="form-control" name="FAVC" placeholder="Enter FAVC" required>
-        <option class="placeholder" selected disabled value="">Select FAVC</option>
-        <option value="yes">
-            yes
+    <td><label for="Administrative">Administrative:</label></td>
+    <td><input class="form-control" type="number" name="Administrative" placeholder="Enter the Administrative" min='0' max='1000000' /></td>
+</tr>
+
+<tr>
+    <td><label for="Administrative_Duration">Administrative_Duration:</label></td>
+    <td><input id="Administrative_Duration" maxlength="50" name="Administrative_Duration" type="number" type="number" min="1" max="1000" step='0.0001'placeholder="Enter float value" /></td>
+</tr>
+
+<tr>
+    <td><label for="Informational">Informational:</label></td>
+    <td><input id="Informational" maxlength="50" name="Informational" type="number" type="number" min="0" max="100000"  /></td>
+</tr>
+
+<tr>
+    <td><label for="Informational_Duration">Informational_Duration:</label></td>
+    <td><input id="Informational_Duration" maxlength="50" name="Informational_Duration" type="number" min="0" max="100000" step='0.01' placeholder="Enter float value" /></td>
+</tr>
+
+<tr>
+    <td><label for="ProductRelated">ProductRelated:</label></td>
+    <td><input id="ProductRelated" maxlength="50" name="ProductRelated" type="number" min="0" max="10000" /></td>
+</tr>
+
+<tr>
+    <td><label for="ProductRelated_Duration">ProductRelated_Duration:</label></td>
+    <td><input id="ProductRelated_Duration" maxlength="50" name="ProductRelated_Duration" type="number" min="0" max="10000" step='0.0001'placeholder="Enter float value"/></td>
+</tr>
+
+<tr>
+    <td><label for="BounceRates">BounceRates:</label></td>
+    <td><input id="BounceRates" maxlength="50" name="BounceRates" type="number" min="0" max="1" step="0.0000001" placeholder="Enter float value"/></td>
+</tr>
+
+<tr>
+    <td><label for="ExitRates">ExitRates:</label></td>
+    <td><input id="ExitRates" maxlength="50" name="ExitRates" type="number" min="0" max="1" step="0.0000001" placeholder="Enter float value"/></td>
+</tr>
+
+<tr>
+    <td><label for="PageValues">PageValues:</label></td>
+    <td><input id="PageValues" maxlength="50" name="PageValues" type="number" min="0" max="100" step="0.00000001" placeholder="Enter float value"/></td>
+</tr>
+
+<tr>
+    <td><label for="SpecialDay">SpecialDay:</label></td>
+    <td><input id="SpecialDay" maxlength="50" name="SpecialDay" type="number" min="0" max="1" step="0.00001" placeholder="Enter float value"/></td>
+</tr>
+
+<tr>
+    <td><label for="OperatingSystems">OperatingSystems:</label></td>
+    <td><input id="OperatingSystems" maxlength="50" name="OperatingSystems" type="number" min="1" max="9" /></td>
+</tr>
+
+<tr>
+    <td><label for="Browser">Browser:</label></td>
+    <td><input id="Browser" maxlength="50" name="Browser" type="number" /></td>
+</tr>
+
+<tr>
+    <td><label for="Region">Region:</label></td>
+    <td><input id="Region" maxlength="50" name="Region" type="number" min="1" max="9" /></td>
+</tr>
+
+<tr>
+    <td><label for="TrafficType">TrafficType:</label></td>
+    <td><input id="TrafficType" maxlength="50" name="TrafficType" type="number" min="1" max="50" /></td>
+</tr>
+
+<tr>
+    <td><label for="Weekend">Weekend:</label></td>
+    <td><select class="form-control" name="Weekend" placeholder="Enter Weekend" required>
+        <option class="placeholder" selected disabled value="">Select Weekend</option>
+        <option value="True">
+            True
         </option>
-        <option value="no">
-            no
+        <option value="False">
+            False
         </option>
     </select>
     </td>
 </tr>
 
 <tr>
-    <td><label for="FCVC">FCVC: </label></td>
-    <td><input id="FCVC" maxlength="50" name="FCVC" type="number" type="number" min="1" max="50" step="0.1" placeholder="Enter float value" /></td>
-</tr>
-
-<tr>
-    <td><label for="NCP">NCP: </label></td>
-    <td><input id="NCP" maxlength="50" name="NCP" type="number" type="number" min="1" max="50" step="0.1" placeholder="Enter float value" /></td>
-</tr>
-
-<tr>
-    <td><label for="CAEC">CAEC:</label></td>
-    <td><select name="CAEC" placeholder="Enter CAEC" required>
-        <option class="placeholder" selected disabled value="">Select CAEC</option>
-        <option value="Sometimes">
-            Sometimes
+    <td><label for="VisitorType">VisitorType:</label></td>
+    <td><select class="form-control" name="VisitorType" placeholder="Enter VisitorType" required>
+        <option class="placeholder" selected disabled value="">Select VisitorType</option>
+        <option value="Returning_Visitor">
+            Returning_Visitor
         </option>
-        <option value="Frequently">
-            Frequently
+        <option value="New_Visitor">
+            New_Visitor
         </option>
-        <option value="Always">
-            Always
-        </option>
-        <option value="no">
-            no
-        </option>
-    </select>
-</td>
-</tr>
-
-<tr>
-    <td><label for="SMOKE">SMOKE:</label></td>
-    <td><select class="form-control" name="SMOKE" placeholder="Enter SMOKE" required>
-        <option class="placeholder" selected disabled value="">Select SMOKE</option>
-        <option value="yes">
-            yes
-        </option>
-        <option value="no">
-            no
+        <option value="Other">
+            Other
         </option>
     </select>
     </td>
-</tr>
-
-<tr>
-    <td><label for="SCC">SCC:</label></td>
-    <td><select class="form-control" name="SCC" placeholder="Enter SCC" required>
-        <option class="placeholder" selected disabled value="">Select SCC</option>
-        <option value="yes">
-            yes
-        </option>
-        <option value="no">
-            no
-        </option>
-    </select>
-    </td>
-</tr>
-
-<tr>
-    <td><label for="CH2O">CH2O: </label></td>
-    <td><input id="CH2O" maxlength="50" name="CH2O" type="number" type="number" min="1" max="10" step="0.1" placeholder="Enter float value" /></td>
-</tr>
-
-<tr>
-    <td><label for="FAF">FAF: </label></td>
-    <td><input id="FAF" maxlength="50" name="FAF" type="number" type="number" min="1" max="10" placeholder="Enter float value" /></td>
-</tr>
-
-<tr>
-    <td><label for="TUE">TUE: </label></td>
-    <td><input id="TUE" maxlength="50" name="TUE" type="number" type="number" min="1" max="10" placeholder="Enter float value" /></td>
-</tr>
-
-<tr>
-    <td><label for="CALC">CALC:</label></td>
-    <td><select name="CALC" placeholder="Enter CALC" required>
-        <option class="placeholder" selected disabled value="">Select CALC</option>
-        <option value="Sometimes">
-            Sometimes
-        </option>
-        <option value="Frequently">
-            Frequently
-        </option>
-        <option value="Always">
-            Always
-        </option>
-        <option value="no">
-            no
-        </option>
-    </select>
-</td>
-</tr>
-
-<tr>
-    <td><label for="MTRANS">MTRANS:</label></td>
-    <td><select name="MTRANS" placeholder="Enter MTRANS" required>
-        <option class="placeholder" selected disabled value="">Select MTRANS</option>
-        <option value="Public_Transportation">
-            Public_Transportation
-        </option>
-        <option value="Automobile">
-            Automobile
-        </option>
-        <option value="Walking">
-            Walking
-        </option>
-        <option value="Motorbike">
-            Motorbike
-        </option>
-        <option value="Bike">
-            Bike
-        </option>
-    </select>
-</td>
 </tr>
 
 <tr>
 <td><div class="mb-3">
-    <input class="btn btn-primary" type="submit" value="Predict obesity type" required />
+    <input class="btn btn-primary" type="submit" value="Predict Revenue at Weekend" required />
 </div>
 </td></tr>
 <td><div>
-    <h3 ALIGN="CENTER">YOUR OBESITY IS AT: {{results}} </h3>
+    <h3 ALIGN="CENTER">STATUS OF REVENUE AT WEEKEND: {{results}} </h3>
 </td></div>
 </form>
 </div>

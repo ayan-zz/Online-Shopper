@@ -20,22 +20,23 @@ def predict_datapoint():
 
     else:
         data=CustomData(
-            Gender=(request.form.get('Gender')),
-            Age=float(request.form.get('Age')),
-            Height=float(request.form.get('Height')),
-            Weight=float(request.form.get('Weight')),
-            family_history_with_overweight=(request.form.get('family_history_with_overweight')),
-            FAVC=(request.form.get('FAVC')),
-            FCVC=float(request.form.get('FCVC')),
-            NCP=float(request.form.get('NCP')),
-            CAEC=(request.form.get('CAEC')),
-            SMOKE=(request.form.get('SMOKE')),
-            CH2O=float(request.form.get('CH2O')),
-            SCC=(request.form.get('SCC')),
-            FAF=float(request.form.get('FAF')),
-            TUE=float(request.form.get('TUE')),
-            CALC=(request.form.get('CALC')),
-            MTRANS=(request.form.get('MTRANS'))
+            Administrative=int(request.form.get('Administrative')),
+            Administrative_Duration=float(request.form.get('Administrative_Duration')),
+            Informational=int(request.form.get('Informational')),
+            Informational_Duration=float(request.form.get('Informational_Duration')),
+            ProductRelated=int(request.form.get('ProductRelated')),
+            ProductRelated_Duration=float(request.form.get('ProductRelated_Duration')),
+            BounceRates=float(request.form.get('BounceRates')),
+            ExitRates=float(request.form.get('ExitRates')),
+            PageValues=float(request.form.get('PageValues')),
+            SpecialDay=float(request.form.get('SpecialDay')),
+            Month=str(request.form.get('Month')),
+            OperatingSystems=int(request.form.get('OperatingSystems')),
+            Browser=int(request.form.get('Browser')),
+            TrafficType=int(request.form.get('TrafficType')),
+            Region=int(request.form.get('Region')),
+            VisitorType=str(request.form.get('VisitorType')),
+            Weekend=bool(request.form.get('Weekend'))
         )
         pred_df=data.get_data_as_dataframe()
         print(pred_df)
@@ -43,9 +44,7 @@ def predict_datapoint():
         predict_pipeline=PredictPipeline()
         result=predict_pipeline.predict(pred_df)
         
-        categories={0:'INSUFFICIENT WEIGHT',1:'NORMAL WEIGHT',2:'OBESITY TYPE I',
-                    3:'OBESITY TYPE II',4:'OBESITY TYPE III',5:'OVERWEIGHT LEVEL I',6:'OVERWEIGHT LEVEL II'}
-        
+        categories={0:'False',1:'True'}
         
         results = categories[result[0]]
         
